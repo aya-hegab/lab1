@@ -1,0 +1,28 @@
+{%extends 'menu/index.html'%} {%load static%}
+<!-- <div></div> -->
+{%block mycontent%}
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <td>action</td>
+    <td>img</td>
+  </tr>
+  {%for product in products%}
+  <tr>
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>
+      <a href="{{product.id}}">more details</a>
+    </td>
+    <td>
+      <img
+        src="{% static 'imgs/' %}{{ product.src }}"
+        width="100px"
+        height="100px"
+      />
+    </td>
+  </tr>
+  {%endfor%}
+</table>
+{%endblock%}

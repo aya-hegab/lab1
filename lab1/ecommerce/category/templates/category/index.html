@@ -1,0 +1,22 @@
+{%extends 'menu/index.html'%}
+<!-- <div></div> -->
+{%block mycontent%}
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>category</th>
+    <td>action</td>
+  </tr>
+  {%for product in products%}
+  <tr>
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.category}}</td>
+    <td>
+      <a href="{{product.id}}">more details</a>
+    </td>
+  </tr>
+  {%endfor%}
+</table>
+{%endblock%}
